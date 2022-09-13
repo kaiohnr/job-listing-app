@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useContext } from 'react';
+
+import jobData from './data.json';
+import Jobs from './components/Jobs';
+import Header from './components/Header';
+import { JobContext } from './context/job-context';
 
 function App() {
+  const jobContext = useContext(JobContext);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div className="header-bg"></div>
+      {jobContext.keywords.length > 0 && <Header />}
+      <Jobs jobData={jobData} />
     </div>
   );
 }
