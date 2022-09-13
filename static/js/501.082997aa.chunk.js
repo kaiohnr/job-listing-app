@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkjob_listing_app=self.webpackChunkjob_listing_app||[]).push([[501],{501:function(e,c,s){e.exports=s.p+"static/media/icon-remove.70c075ce001e5ccae7c6.svg"}}]);
